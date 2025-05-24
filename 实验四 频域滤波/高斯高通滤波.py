@@ -19,7 +19,7 @@ def create_filter(img, D0):
             # 到中心点的距离
             D = np.sqrt((i - mid_row) ** 2 + (j - mid_col) ** 2)
             # 高斯低通滤波器
-            H[i, j] = np.exp(-(D ** 2) / (2 * (D0 ** 2)))
+            H[i, j] = 1 - np.exp(-(D ** 2) / (2 * (D0 ** 2)))
 
     return H
 

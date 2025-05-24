@@ -10,7 +10,7 @@ rcParams['font.sans-serif'] = ['SimHei']
 # 基于频率调谐的图像显著性检测
 def frequency_tuned_saliency():
     # 图像路径
-    image_path = '../resources/assets/exp5/501.png'
+    image_path = '../resources/assets/exp5/504.png'
     # 读取图像
     image = cv2.imread(image_path)
     image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)

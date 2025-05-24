@@ -167,7 +167,7 @@ def main():
     carver = SeamCarver(image_path)
 
     # 调整图像宽度（例如减小50像素）
-    new_width = carver.width - 50
+    new_width = carver.width - 120
     new_image, frames = carver.resize(new_width=new_width, show_animation=True)
 
     # 显示原始图像和调整后的图像
@@ -175,12 +175,12 @@ def main():
 
     plt.subplot(121)
     plt.title('原始图像 ({0}x{1})'.format(carver.original_image.shape[1], carver.original_image.shape[0]))
-    plt.imshow(carver.original_image)
+    plt.imshow(carver.original_image, aspect='equal')
     plt.axis('off')
 
     plt.subplot(122)
     plt.title('调整后图像 ({0}x{1})'.format(new_image.shape[1], new_image.shape[0]))
-    plt.imshow(new_image)
+    plt.imshow(new_image, aspect='equal')
     plt.axis('off')
 
     plt.tight_layout()

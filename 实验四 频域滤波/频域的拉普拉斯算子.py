@@ -42,7 +42,7 @@ def show_image(image):
 
 def main():
     # 图像路径
-    image_path = '../resources/assets/exp4/407.png'
+    image_path = '../resources/assets/exp4/406.png'
     # 读取图像
     image = cv2.imread(image_path)
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
@@ -70,7 +70,7 @@ def main():
     plt.axis('off')
 
     # 图像锐化
-    c = -1
+    c = -5
     sharpened_image = freq_data + c * (freq_data * mask[:, :, np.newaxis])
     sharpened_image = np.real(np.fft.ifft2(sharpened_image, axes=(0, 1)))
     plt.subplot(1, 4, 4)
