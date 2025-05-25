@@ -163,11 +163,11 @@ class SeamCarver:
 
 def main():
     """主函数，演示seam carving功能"""
-    image_path = '../resources/assets/exp5/501.png'
+    image_path = '../resources/assets/exp6/605.png'
     carver = SeamCarver(image_path)
 
     # 调整图像宽度（例如减小50像素）
-    new_width = carver.width - 120
+    new_width = carver.width - 100
     new_image, frames = carver.resize(new_width=new_width, show_animation=True)
 
     # 显示原始图像和调整后的图像
