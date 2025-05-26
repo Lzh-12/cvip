@@ -55,6 +55,9 @@ def laplacian_operator(img: np.ndarray,
     # 应用卷积
     laplacian = cv2.filter2D(img_float, -1, kernel)
 
+    # laplacian = np.clip(laplacian, 0, 255)
+    # laplacian = np.float32(laplacian)
+
     print(laplacian.min(), laplacian.max())
 
     # 图像锐化: f_sharp = f + α(-∇²f) = f - α·∇²f
@@ -64,10 +67,7 @@ def laplacian_operator(img: np.ndarray,
         # 裁剪到有效范围 [0, 255]
         sharpened = np.clip(sharpened, 0, 255).astype(np.uint8)
 
-    # 归一化拉普拉斯结果用于显示
-    if normalize:
-        laplacian = cv2.normalize(laplacian, None, 0, 255, cv2.NORM_MINMAX, dtype=cv2.CV_8U)
-
+    laplacian = np.clip(laplacian, 0, 255)
     return laplacian, sharpened
 
 
