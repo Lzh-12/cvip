@@ -78,7 +78,7 @@ def main():
     image_path = '../resources/assets/exp3/317.jpg'
 
     # 测试不同的锐化参数
-    show_sharpening_process(image_path, sigma=1.0, amount=1.0)
+    show_sharpening_process(image_path, sigma=1.0, amount=3.0)
 
 
 if __name__ == '__main__':
