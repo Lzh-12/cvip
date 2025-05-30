@@ -70,7 +70,7 @@ def main():
     plt.axis('off')
 
     # 图像锐化
-    c = -5
+    c = -10
     sharpened_image = freq_data + c * (freq_data * mask[:, :, np.newaxis])
     sharpened_image = np.real(np.fft.ifft2(sharpened_image, axes=(0, 1)))
     plt.subplot(1, 4, 4)

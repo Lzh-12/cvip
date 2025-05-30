@@ -58,7 +58,7 @@ def main():
         exit(1)
 
     # 高斯低通滤波器的截止频率
-    D0 = 60
+    D0 = 10
     # 应用高斯低通滤波器进行边缘提取
     H, filtered_magnitude, edge_gaussian = gaussian_lowpass_filter(image, D0)
 
